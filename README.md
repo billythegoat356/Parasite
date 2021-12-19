@@ -6,36 +6,25 @@
 
 -----
 
-### <p align="center">🌍 Title 🌍</p>
+### <p align="center">🦠 Parasite 🦠</p>
 
 <br><br>
 <p align="center">
 <strong>
-text
-<br>
-text
+Parasite is a tool written in Python3 allowing you to "compress" any file, reducing its size.
 <br><br><br>
 </strong>
-<img src="link" width="750", height="400">
 </p>
 <br>
-
------
-
-### <p align="center">📋 Examples 📋</p>
-
-<br><br>
-`print('hellooooooooo world!!!!!!')` -> `print('helloඝ9ඝ world!ඝ6ඝ')`
-<br><br>
 
 -----
 
 ### <p align="center">⭐ Features ⭐</p>
 
 <br><br>
-<strong>+ plus</strong>
+<strong>+ Fast</strong>
 <br>
-<strong>+ plus</strong>
+<strong>+ Good optimization, file size can go from 20MB to 12MB</strong>
 <br>
 <strong>+ plus</strong>
 <br>
@@ -45,11 +34,9 @@ text
 </p>
 
 <br>
-<strong>- minus</strong>
+<strong>- Needs this tool to get the old file (logic)</strong>
 <br>
-<strong>- minus</strong>
-<br>
-<strong>- minus</strong>
+<strong>- Some files aren't compatible</strong>
 <br><br>
 
 -----
@@ -61,8 +48,8 @@ text
 
 <br><br>
 * Time: 🟢
-* Complexity: 🟣
-* Service: 🔴
+* Complexity: 🔵
+* Service: 🔵
 <br><br>
 
 -----
@@ -71,9 +58,6 @@ text
 
 <p align="center"><strong><i>Feel free to make a pull request on this repository to submit any idea!</i></strong</p>
 
-<br><br>
-* idea
-* idea
 <br><br>
 
 -----
