@@ -26,8 +26,6 @@ Parasite is a tool written in Python3 allowing you to "compress" any file, reduc
 <br>
 <strong>+ Good optimization, file size can go from 20MB to 12MB</strong>
 <br>
-<strong>+ plus</strong>
-<br>
 
 <p align="right">
 <img src="https://repository-images.githubusercontent.com/437662725/49b887df-c77c-4365-9d15-c3357d8148ad" width="250", height="250">
