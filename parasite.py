@@ -6,67 +6,13 @@
 
 from os.path import isfile
 from pystyle import Anime, Colorate, Colors, Center, System, Write
+from zlib import compress
 
 
-class function:
-    ...
+def Parasite(content):
+    ncontent = compress(content)
+    return f"eval(compile(__import__('zlib').decompress({ncontent})))"
 
-
-class Parasite:
-
-
-    def run(file: str, mode: function) -> tuple:
-        with open(file=file, mode='r', encoding=Parasite.encoding) as f:
-            content = f.read()
-
-
-        result = mode(content=content)
-
-
-        with open(file='new-' + (file.split('\\')[-1] if '\\' in file else file.split('/')[-1]), mode='w', encoding=Parasite.encoding) as f:
-            f.write(result)
-
-        return (len(content), len(result))
-
-    spchar = "ඝ"
-    encoding = "utf-8"
-
-    def compress(content: str) -> str:
-        result = ""
-
-        while True:
-            char = content[0]
-            if len(content) == 1:
-                result += char
-                break
-            content = content[1:]
-            x = 1
-            while content[0] == char:
-                if len(content) == 1:
-                    break
-                x += 1
-                content = content[1:]
-            if x > 3:
-                result += f'{char}{Parasite.spchar}{x}{Parasite.spchar}'
-            else:
-                result += char * x
-        return result
-
-    def decompress(content: str) -> str:
-        # a finir
-        result = ""
-        ncontent = content.split(Parasite.spchar)
-
-        while True:
-          if len(ncontent) == 1:
-            result += ncontent[0]
-            break
-          else:
-            result += ncontent[0][:-1]
-            result += ncontent[0][-1] * int(ncontent[1])
-            ncontent = ncontent[2:]
-            
-        return result
 
 
 
@@ -127,23 +73,18 @@ def main():
       print(Colorate.Error("Error! This file does not exist!"))
       return
 
-  mode = Write.Input("Compress or decompress this file [c/d] -> ", Colors.green_to_yellow, interval=0.005)
-  print()
+  with open(file, mode='rb') as f:
+    content = f.read()
 
 
   if mode not in ('c', 'd'):
     print(Colorate.Error("Please enter 'c' or 'd'!"))
     return
 
-  try:
-    if mode == 'c':
-      olen, nlen = Parasite.run(file=file, mode=Parasite.compress)
-    elif mode == 'd':
-      olen, nlen = Parasite.run(file=file, mode=Parasite.decompress)
-  except Exception as e:
-      print(Colorate.Error(f"An error occured: [{e}]! Maybe your file isn't compatible with Parasite."))
-      return
+  content = Parasite(content)
 
+  with open(file='new-' + (file.split('\\')[-1] if '\\' in file else file.split('/')[-1]), mode='w', encoding='utf-8') as f:
+      f.write(content)
 
   print()
 
