@@ -11,7 +11,9 @@
 <br><br>
 <p align="center">
 <strong>
-Parasite is a tool written in Python3 allowing you to "compress" any file, reducing its size.
+Parasite is a tool written in Python3 allowing you to "compress" Python files,
+<br>
+allowing you to keep your code executable but make it less heavy.
 <br><br><br>
 </strong>
 </p>
@@ -24,17 +26,14 @@ Parasite is a tool written in Python3 allowing you to "compress" any file, reduc
 <br><br>
 <strong>+ Fast</strong>
 <br>
-<strong>+ Good optimization, file size can go from 20MB to 12MB</strong>
+<strong>+ Good optimization (using the `zlib` library), file size can go from 20MB to 6MB</strong>
+<br>
+<strong>+ Your Python program will only be a few milliseconds slower</strong>
 <br>
 
 <p align="right">
 <img src="https://repository-images.githubusercontent.com/437662725/49b887df-c77c-4365-9d15-c3357d8148ad" width="250", height="250">
 </p>
-
-<br>
-<strong>- Needs this tool to get the old file (logic)</strong>
-<br>
-<strong>- Some files aren't compatible</strong>
 <br><br>
 
 -----
@@ -47,7 +46,7 @@ Parasite is a tool written in Python3 allowing you to "compress" any file, reduc
 <br><br>
 * Time: 🟢
 * Complexity: 🔵
-* Service: 🔵
+* Service: 🟣
 <br><br>
 
 -----
